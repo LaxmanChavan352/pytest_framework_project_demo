@@ -1,0 +1,29 @@
+in pytest fixture concept use to save code and time time through fixture we can achive code reusability
+
+we are create a conftest.py file in root directory of project folder so we can be acces that conftest everywere
+in project.
+
+conftest code present for whole project
+
+it will run before actual test run
+
+best use browser invocation code in selenium
+
+conftest demo
+
+conftest.py
+
+from selenium import webdriver
+from pytest import fixture
+@fixture(scope='class/session/function')
+def get_browser():
+    driver=webdriver.ChromeOption(executable_pat("c\\chromedriver"))
+    return driver
+
+ # one demo method how invoke that conftest fixture into this testcase
+def test_dummy_tescase(get_browser):
+    browser=get_browser()
+    browser.get(https:\\google.com)
+
+
+this is the way we can use fixture in pytest

@@ -1,0 +1,52 @@
+smoke test is the minimal requirnment of feature test so product can be run at least basic level.
+compulsory require test
+
+test which are must for product requienment mark as smoke test
+ex in car test_engine is smoke test
+           test_body is also an smoke test
+
+
+
+      same as like as mark we are used to group that test and eun that test
+
+
+      @mark.smoke above of test so we can run group of test so we can deploy projet basic featre at least
+
+      @mark.smoke
+      def test_head_sound():
+        return Yes
+
+
+
+      test 2
+
+      @mark.smoke
+      def test_button_of_headphone():
+        return working_fine
+
+
+
+        Run Smoke test command  : pytest -m smoke   it will run all test case which are marked as smoke
+
+
+        if we want to run the test case which is not marke as smoke then just
+        Run command
+        pytest -m "not smoke"
+
+        all test case which arw not marked as smoke run if mark diffrent name then also that test case also run
+
+
+        we can run two test and rum that  mark using or and and
+
+        ex
+
+        pytest -m "smoke or earbud"
+
+
+
+        pytest -m "smoke and earbud"
+
+
+
+        we can mark class also and run the whole class test case
+        same as we run function or testcase

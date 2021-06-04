@@ -1,0 +1,28 @@
+mark concept used to run selected test if we have 1000 of test then just search the test which is marked adn run
+that perticular test only ignore rest of the test
+
+Syntax
+
+first import the mark from pytest
+
+then just write decorator above of function/test which one we want to run mark will search that test and run
+that perticular test only.
+
+@mark.engine mean engine is a key where conteroller will go and run that test below of engine mark
+
+ex
+@mark.engine
+def test_engine_test():
+    return start
+
+in this franework we are used the earbud folder test case run only so we are going to mark that test only
+
+@mark.earbud
+def test_earbud():
+    return perfect
+
+to run this marker we use
+
+Run Command : - pytest -m erabud
+
+it will run that perticular test

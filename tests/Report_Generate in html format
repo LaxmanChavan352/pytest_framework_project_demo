@@ -1,0 +1,10 @@
+just install
+
+pip install pytest-html
+
+and run this command to generate reportin html format
+
+pytest --html="Report.html"
+
+
+see Report.html generate in the project folder
